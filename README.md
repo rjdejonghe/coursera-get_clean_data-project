@@ -3,15 +3,43 @@
 README file for course project
 ==============================
 
-### Getting and Cleaning Data
+### for Coursera: Getting and Cleaning Data
 
-by Jeff Leek, PhD, Roger D. Peng, PhD, Brian Caffo, PhD
+(by Jeff Leek, PhD, Roger D. Peng, PhD, Brian Caffo, PhD)
 
 
 Repo Contents
 -------------
 
-This repo contains a script run_analysis.R which takes all of the data (contained in the data directory which is ignored in the git repo), extracts only the mean and std. dev. measurements, and puts them into a new, tidy data set, which is then stored as a text file (tab delimited) tidy_data.txt.  This text file is included in the repo.
+This repo contains a script run_analysis.R which takes all of the data (contained in the data directory which is ignored in the git repo), extracts only the mean and std. dev. measurements, and puts them into a new, tidy data set, which is then stored as a text file (tab delimited) tidy_data.txt.  This text file is included in the repo.  The repo also includes a codebook.md file describing all the variables in the tidy_data.txt file.
+
+
+
+Script run_analysis.R
+------
+
+This script loads data from the data directory and turns it into a tidy data set.  It then uses that tidy data set to calculate the averages over each variable for each person/activity combo.
+
+### Reading in Data
+
+In order to read data in use the following command
+
+```
+read.table("tidy_data.txt")
+```
+
+### Notes
+
+The columns which were included in the tidy data set include all those which were means and standard deviations.  In particular, those names of features were taken which contained mean(), std(), and meanFreq().  
+
+
+
+
+Output
+------
+
+The output dataset is described in the codebook.md file.
+
 
 
 
@@ -36,7 +64,3 @@ You should create one R script called run_analysis.R that does the following.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-Code Book
----------
-
-(to be written)
